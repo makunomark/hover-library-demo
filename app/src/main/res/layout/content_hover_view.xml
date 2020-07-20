@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        style="@style/OrderDetailCardStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.makuno.overlaywidget.RoundRectCornerImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@color/colorPrimary" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShopName"
+                style="@style/CardTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Pata Potea Shop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/textView20"
+                style="@style/CardItemHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/shop_no"
+                app:layout_constraintStart_toStartOf="@+id/tvShopName"
+                app:layout_constraintTop_toBottomOf="@+id/tvShopName" />
+
+            <TextView
+                android:id="@+id/tvShopNumber"
+                style="@style/CardTextTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="123456"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/textView20"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+
+            <TextView
+                android:id="@+id/textView25"
+                style="@style/CardItemHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/phone_no"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvShopName" />
+
+            <TextView
+                android:id="@+id/tvShopPhoneNumber"
+                style="@style/CardTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0712 123123"
+                app:layout_constraintEnd_toEndOf="@+id/textView25"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_order_detail_card_actions"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvShopNumber">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCallVendor"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/call_vendor"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    app:icon="@drawable/ic_call"
+                    app:iconPadding="4dp"
+                    app:iconTint="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
